@@ -20,8 +20,7 @@ public class Scraper {
 
         try {
             doc = Jsoup.connect(url)
-                    .userAgent("Mozilla/5.0 (Windows NT 11.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)" +
-                            "Chrome/124.0.0.0 Safari/537.36")
+                    .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
                     .header("Accept-Language", "*")
                     .get();
             //userAgent and header are used to not being blocked automatically by sites
@@ -30,7 +29,7 @@ public class Scraper {
         }
 
         // retrieving the list of product HTML elements
-        Elements productElements = doc.select("li.produto");
+        Elements productElements = doc.select("li.product");
 
         // iterating over the list of HTML products
         for (Element productElement : productElements) {

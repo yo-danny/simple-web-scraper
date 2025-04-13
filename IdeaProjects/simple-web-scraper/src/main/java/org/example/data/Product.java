@@ -42,9 +42,9 @@ public class Product {
 
     @Override
     public String toString() {
-        return "{ \"url\":\"" + url + "\", "
-                + " \"image\":\"" + image + "\", "
-                + "\"name\":\"" + name + "\", "
-                + "\"price\": \"" + price + "\" }";
+        return "{ \"url\":\"" + url + "\", " + "\n"
+                + " \"image\":\"" + image + "\", " + "\n"
+                + "\"name\":\"" + name + "\", " + "\n"
+                + "\"price\": \"" + price + "\" }" + "\n";
     }
 }
