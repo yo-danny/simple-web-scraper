@@ -1,12 +1,17 @@
 package org.example.data;
 
 public class Product {
+    private int id;
     private String url;
     private String image;
     private String name;
     private String price;
 
     public Product(){};
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public void setImage(String image) {
         this.image = image;
@@ -22,6 +27,10 @@ public class Product {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getUrl() {
@@ -42,7 +51,8 @@ public class Product {
 
     @Override
     public String toString() {
-        return "{ \"url\":\"" + url + "\", " + "\n"
+        return id + "\n" +
+                "{ \"url\":\"" + url + "\", " + "\n"
                 + " \"image\":\"" + image + "\", " + "\n"
                 + "\"name\":\"" + name + "\", " + "\n"
                 + "\"price\": \"" + price + "\" }" + "\n";
