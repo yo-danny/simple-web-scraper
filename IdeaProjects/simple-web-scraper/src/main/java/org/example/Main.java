@@ -6,6 +6,6 @@ public class Main {
     public static void main(String[] args) {
         Scraper scraperTest = new Scraper("https://www.scrapingcourse.com/ecommerce/");
 
-        scraperTest.initScraper();
+        System.out.println(scraperTest.ScrapeConcurrently());
     }
 }
